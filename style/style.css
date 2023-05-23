@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1E1E1E;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 48px;
+
+    /*propriedades para deixar o header fixo
+      mesmo com os scrolls vertical e horizontal*/
+    position: fixed;
+    width: 100%;
+    background-color: #1E1E1E;
+}
+button {
+    background-color: transparent;
+    color: white;
+    padding: 16px 24px;
+    border: 1.5px solid #8B5CF6;
+    border-radius: 8px;
+
+    display: flex;
+    /*align-items: center;
+    justify-content: center;*/
+    gap: 12px;
+
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+
+    cursor: pointer;
+}
+    /*de 0 até 600px execute este estilo sobre esse elemento*/
+@media(max-width:600px){
+    button > div{
+        display: none;
+    }
+    button {
+
+        border: 2.5px solid #8B5CF6;
+    }
+}
+
+form {
+    display: flex;
+    padding: 185px 48px 48px 48px;
+    width: fit-content; /*encaixa o conteúdo*/
+}
+
+.days {
+
+    display: flex;
+    margin-left: 32px;
+    gap: 48px;
+}
+
+.day {
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+}
+.day > div {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 20px;
+    text-align: center;
+    color: #A1A1AA;
+
+    margin-bottom: 8px;
+}
+
+input {
+    appearance: none;  /*"Destrava" alguns estilos*/
+
+    -webkit-appearance: none; /*Mesma propriedade com compatibilidadade com outros navegadores*/
+
+    width: 64px;
+    height: 64px;
+
+    border: 2px solid #27272A;
+    border-radius: 8px;
+    background-color: #18181B;
+}
+
+input:checked {
+    
+    border: 2px solid #A78BFA;
+    background-color: #8B5CF6;
+}
+
+.habits {
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    margin-top: 60px;
+    
+}
+
+.habit {
+    
+    width: 64px;
+    height: 64px;
+    font-size: 32px;
+    
+    display: flex;
+    align-items: center; /*Alinha verticalmente os elementos*/
+    justify-content: center; /*Alinha horizontalmente os elementos*/
+
+}
+
